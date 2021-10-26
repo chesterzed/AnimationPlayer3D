@@ -43,7 +43,6 @@ public class PlayerMover : MonoBehaviour
 	private void OnEnable()
 	{
 		_playerInput.Enable();
-		Debug.Log(_gunPool[1].name);
 	}
 
 	private void OnDisable()
