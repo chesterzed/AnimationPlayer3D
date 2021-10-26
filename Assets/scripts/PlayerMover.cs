@@ -15,6 +15,10 @@ public class PlayerMover : MonoBehaviour
 	[SerializeField] private float _rotationSpeed;
 	[SerializeField] private float _enemyDistance;
 	[SerializeField] private float _killEnemyDistance;
+	
+	[SerializeField] private GameObject[] _gunPool;
+	private Attach_R _gunPos;
+	private GameObject _currentGun;
 
 	private Animator _animator;
 	private PlayerInput _playerInput;
@@ -39,6 +43,7 @@ public class PlayerMover : MonoBehaviour
 	private void OnEnable()
 	{
 		_playerInput.Enable();
+		Debug.Log(_gunPool[1].name);
 	}
 
 	private void OnDisable()
@@ -48,9 +53,12 @@ public class PlayerMover : MonoBehaviour
 
 	private void Start()
 	{
+		_gunPos = GetComponentInChildren<Attach_R>();
 		EnemyObj = FindObjectOfType<Enemy>();
 		_animator = GetComponent<Animator>();
 		_chest = GetComponentInChildren<ChestRotate>().transform;
+		
+		SwitchGun(1);
 	}
 
 	private void Update()
@@ -76,6 +84,7 @@ public class PlayerMover : MonoBehaviour
 			}       
 			if (_timer >= 1.8f)
 			{
+				SwitchGun(1);
 				transform.rotation = new Quaternion(0, 0, 0, 0);
 				EnemyObj.GetComponent<Animator>().enabled = false;
 				EnemyObj.isDead = true;
@@ -138,6 +147,7 @@ public class PlayerMover : MonoBehaviour
 		if (_animator.GetBool("isReady"))
 		{
 			_playerInput.Disable();
+			SwitchGun(24);
 
 			float Dist = (EnemyObj.transform.position - transform.position).magnitude;
 			float dx = EnemyObj.transform.position.x - transform.position.x;
@@ -153,6 +163,15 @@ public class PlayerMover : MonoBehaviour
 			EnemyObj.transform.rotation = transform.rotation;
 			isAttack = true;
 		}
+	}
+
+	private void SwitchGun(int gunId)
+    {
+		Destroy(_currentGun);
+		_currentGun = Instantiate(_gunPool[gunId], _gunPos.transform);
+		_currentGun.transform.SetParent(_gunPos.transform);
+		_currentGun.transform.localPosition = new Vector3(0, 0, 0);
+		_currentGun.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 	}
 
 	private void EnemyChecker()

@@ -216,6 +216,39 @@ MonoBehaviour:
   _rotationSpeed: 9
   _enemyDistance: 0.4
   _killEnemyDistance: 0.15
+  _gunPool:
+  - {fileID: 4758185309475976473, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 2258128639415051852, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -2673208006225873264, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 5523416990847296901, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 6765883981600109942, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -4090747180543206410, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -7049628912924296609, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 3494092608151611860, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 6000524111534646269, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 92100424211000244, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -2421062206633059959, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -7034797943383409017, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 2153337203958757087, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 8959920077221366047, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -1566767346484493200, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 8293302185630616089, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 4185352034241900946, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -4646238997204551088, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 4879470502932388952, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 7864201739894066993, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 80165338628537798, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 10858078445134473, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 5552939546760606913, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -2032041125530860220, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 7676634266986881223, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 385745708007800924, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 2107883608537208725, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: 7852037233749673432, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -420088113769629467, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -6557514896456131651, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -8779357649641734130, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
+  - {fileID: -8171644722926247782, guid: 1a404aa547b85ec4484af2b67f938411, type: 3}
 --- !u!1 &823026989897264599
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6330439137424701718}
+  - component: {fileID: 3651906151569762821}
   m_Layer: 0
   m_Name: Attach_R
   m_TagString: Untagged
@@ -619,6 +653,18 @@ Transform:
   m_Father: {fileID: 705575603738969668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3651906151569762821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842120690644844242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e172c524c7b384088e24455814324b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2053109596444715417
 GameObject:
   m_ObjectHideFlags: 0
